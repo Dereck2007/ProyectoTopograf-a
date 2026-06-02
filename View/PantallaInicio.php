@@ -6,23 +6,22 @@
     <title>Courses | Education</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/View/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/animated-headline.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/slicknav.css">
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <link rel="stylesheet" href="./css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="./css/gijgo.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/animated-headline.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
+    
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/style.css">
     
 </head>
 
@@ -333,7 +332,8 @@
                 <div class="right-content1">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="img/gallery/about.png" alt="">
+                        
+                        <br>
 
                         <div class="video-icon" >
                             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i class="fas fa-play"></i></a>
@@ -467,7 +467,7 @@
                 <div class="right-content3">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about3.png" alt="">
+                        <img src="img/gallery/about3.png" alt="">
                     </div>
                 </div>
                 <div class="left-content3">
@@ -479,7 +479,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Techniques to engage effectively with vulnerable children and young people.</p>
@@ -496,7 +496,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world learning together.

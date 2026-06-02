@@ -48,23 +48,32 @@
                 <div class="logo-login">
                     <a href="PantallaInicio.php"><img src="img/logo/loder.png" alt=""></a>
                 </div>
-                <h2>Login/InicioSesión</h2>
+                <h2>Inicio Sesión</h2>
                 <div class="form-input">
-                    <label for="name">Email/Correo Electrónico</label>
-                    <input  type="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-input">
-                    <label for="name">Password/Contraseña</label>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
+    <label for="correo">Correo Electrónico</label>
+    <input
+        type="text"
+        id="correo"
+        name="correo"
+        required>
+</div>
+
+<div class="form-input">
+    <label for="contrasenna">Contraseña</label>
+    <input
+        type="password"
+        id="contrasenna"
+        name="contrasenna"
+        required>
+</div>
                 <div class="form-input pt-30">
-                    <input type="submit" name="submit" value="login">
+                    <input type="submit" name="submit" value="Iniciar Sesión">
                 </div>
                 
                 <!-- Forget Password -->
-                <a href="RecuperarAcceso.php" class="forget">Forget Password</a>
+                <a href="RecuperarAcceso.php" class="forget">Olvidó la contraseña</a>
                 <!-- Forget Password -->
-                <a href="RegistroUsuario.php" class="registration">Registration</a>
+                <a href="RegistroUsuario.php" class="registro">Registrarse</a>
             </div>
         </form>
         <!-- /end login form -->

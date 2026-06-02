@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,22 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/slicknav.css">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/progressbar_barfiller.css">
     <link rel="stylesheet" href="css/gijgo.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/animated-headline.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -39,44 +41,47 @@
     <!-- Preloader Start-->
 
 
-<!-- Register -->
+    <!-- Register -->
 
-<main class="login-body" data-vide-bg="img/login-bg.mp4" data-vide-options="posterType: none">
-    <!-- Login Admin -->
-    <form class="form-default" action="InicioSesion.php" method="POST">
-        
-        <div class="login-form">
-            <!-- logo-login -->
-            <div class="logo-login">
-                <a href="PantallaInicio.php"><img src="img/logo/loder.png" alt=""></a>
+    <main class="login-body" data-vide-bg="img/login-bg.mp4" data-vide-options="posterType: none">
+        <!-- Login Admin -->
+        <form class="form-default" action="InicioSesion.php" method="POST">
+
+            <div class="login-form">
+                <!-- logo-login -->
+                <div class="logo-login">
+                    <a href="PantallaInicio.php"> <img src="img/logo/loder.png" alt=""> </a>
+                </div>
+                <h2>Registro</h2>
+
+                <div class="form-input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
             </div>
-            <h2>Registration/Registro</h2>
 
             <div class="form-input">
-                <label for="name">Full name/Nombre Completo</label>
-                <input  type="text" name="name" placeholder="Full name">
+                <label for="correo">Correo Electrónico</label>
+                <input type="text" id="correo" name="correo" required />
             </div>
+
             <div class="form-input">
-                <label for="name">Email Address/Correo Electrónico</label>
-                <input type="email" name="email" placeholder="Email Address">
+                <label for="contrasenna">Contraseña</label>
+                <input type="password" id="contrasenna" name="contrasenna" required />
             </div>
+
             <div class="form-input">
-                <label for="name">Password/Contraseña</label>
-                <input type="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-input">
-                <label for="name">Confirm Password/Confirmar Contraseña</label>
-                <input type="password" name="password" placeholder="Confirm Password">
+                <label for="confirmPassword">Confirmar Contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required />
             </div>
             <div class="form-input pt-30">
-                <input type="submit" name="submit" value="Registration">
+                <input type="submit" name="submit" value="Registrarse">
             </div>
             <!-- Forget Password -->
-            <a href="InicioSesion.php" class="registration">login</a>
-        </div>
-    </form>
-    <!-- /end login form -->
-</main>
+            <a href="InicioSesion.php" class="registro">Iniciar Sesion</a>
+            </div>
+        </form>
+        <!-- /end login form -->
+    </main>
 
 
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -105,7 +110,7 @@
     <script src="js/jquery.sticky.js"></script>
     <!-- Progress -->
     <script src="js/jquery.barfiller.js"></script>
-    
+
     <!-- counter , waypoint,Hover Direction -->
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
@@ -118,10 +123,11 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    
-    </body>
+
+</body>
+
 </html>

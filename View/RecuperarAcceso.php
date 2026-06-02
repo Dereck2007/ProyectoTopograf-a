@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,22 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/slicknav.css">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/progressbar_barfiller.css">
     <link rel="stylesheet" href="css/gijgo.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/animated-headline.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -41,30 +43,30 @@
     <main class="login-body" data-vide-bg="img/login-bg.mp4" data-vide-options="posterType: none">
         <!-- Recuperar Password Form -->
         <form class="form-default" action="#" method="POST">
-            
+
             <div class="login-form">
                 <!-- logo-login -->
                 <div class="logo-login">
                     <a href="PantallaInicio.php"><img src="img/logo/loder.png" alt=""></a>
                 </div>
                 <h2>Recuperar Acceso</h2>
-                <p style="color: #666; text-align: center; margin-bottom: 20px;">
-                    Introduce tu correo electrónico para enviarte las instrucciones de restablecimiento.
+                <p style="color: #ffffff; text-align: center; margin-bottom: 20px;">
+                    Introduce tu correo electrónico para enviarte las instrucciones de reestablecimiento.
                 </p>
 
                 <div class="form-input">
-                    <label for="email">Email/Correo Electrónico</label>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="text" id="correo" name="correo" required/>
                 </div>
 
                 <div class="form-input pt-30">
                     <input type="submit" name="submit" value="Enviar Enlace">
                 </div>
-                
+
                 <!-- Volver al Login -->
                 <a href="InicioSesion.php" class="forget">Volver al Inicio de Sesión</a>
                 <!-- Registro por si acaso -->
-                <a href="RegistroUsuario.php" class="registration">Registration</a>
+                <a href="RegistroUsuario.php" class="registro">Registro</a>
             </div>
         </form>
         <!-- /end login form -->
@@ -96,7 +98,7 @@
     <script src="js/jquery.sticky.js"></script>
     <!-- Progress -->
     <script src="js/jquery.barfiller.js"></script>
-    
+
     <!-- counter , waypoint,Hover Direction -->
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
@@ -109,10 +111,11 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    
-    </body>
+
+</body>
+
 </html>
