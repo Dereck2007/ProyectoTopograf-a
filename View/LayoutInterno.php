@@ -1,0 +1,54 @@
+<?php
+
+function ImportCSS()
+{
+    echo '
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <link rel="stylesheet" href="../css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="../css/gijgo.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/animated-headline.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/style.css">
+    ';
+}
+
+function ImportJS()
+{
+    echo '
+    <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/animated.headline.js"></script>
+    <script src="../js/jquery.magnific-popup.js"></script>
+    <script src="../js/gijgo.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/jquery.barfiller.js"></script>
+    <script src="../js/jquery.counterup.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script src="../js/hover-direction-snake.min.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/jquery.form.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/mail-script.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+    ';
+}
+
+?>

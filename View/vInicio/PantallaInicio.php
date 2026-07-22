@@ -1,28 +1,22 @@
+<?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoProyectoAmbienteWeb/Controller/InicioController.php';
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoProyectoAmbienteWeb/View/LayoutInterno.php';
+?>
+
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Courses | Education</title>
+    <title>Topografía Proyecto | Inicio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/View/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/slicknav.css">
-    <link rel="stylesheet" href="./css/flaticon.css">
-    <link rel="stylesheet" href="./css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="./css/gijgo.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
-    <link rel="stylesheet" href="./css/animated-headline.css">
-    <link rel="stylesheet" href="./css/magnific-popup.css">
-    
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/nice-select.css">
-    <link rel="stylesheet" href="./css/style.css">
-    
+<?php
+    ImportCSS();
+?>
+   
 </head>
 
 <body>
@@ -32,7 +26,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="img/logo/loder.png" alt="">
+                    <img src="../img/logo/loder.png" alt="">
                 </div>
             </div>
         </div>
@@ -48,7 +42,6 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="PantallaInicio.php"><img src="img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -57,20 +50,27 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li class="active" ><a href="index.html">Home</a></li>
-                                                <li><a href="courses.html">Courses</a></li>
-                                                <li><a href="about.html">About</a></li>
+                                                <li class="active" ><a href="PantallaInicio.php">Inicio</a></li>
+                                                <li><a href="../vUsuario/CambiarContrasenna.php">Cambiar contraseña</a></li>
+                                                <li><a href="about.html">Nosotros</a></li>
                                                 <li><a href="#">Blog</a>
                                                     <ul class="submenu">
                                                         <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
+                                                        <li><a href="blog_details.html">Detalles del Blog</a></li>
+                                                        <li><a href="elements.html">Elementos</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="contact.html">Contacto</a></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-                                                <li class="button-header"><a href="InicoSesion.html" class="btn btn3">Log in</a></li>
+                                                <?php if(isset($_SESSION["NombreUsuario"])): ?>
+                                                    <li class="button-header margin-left "><a href="#" class="btn"><i class="fas fa-user"></i> <?php echo $_SESSION["NombreUsuario"]; ?></a></li>
+                                                    <form method="POST" action="" style="display:inline; margin-left: 10px;">
+                                                        <li class="button-header"><button type="submit" name="btnSalir" class="btn btn3">Cerrar Sesión</button></li>
+                                                    </form>
+                                                <?php else: ?>
+                                                    <li class="button-header margin-left "><a href="RegistroUsuario.php" class="btn">Registrar</a></li>
+                                                    <li class="button-header"><a href="InicioSesion.php" class="btn btn3">Iniciar Sesión</a></li>
+                                                <?php endif; ?>
                                             </ul>
                                         </nav>
                                     </div>
@@ -96,11 +96,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-6 col-lg-7 col-md-12">
-                                <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Online learning<br> platform</h1>
-                                    <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>          
@@ -114,33 +110,33 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="img/icon/icon1.svg" alt="">
+                                
                             </div>
                             <div class="features-caption">
-                                <h3>60+ UX courses</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Levantamientos Topográficos</h3>
+                                <p>Medición precisa de terrenos, fincas y parcelas con tecnología GPS de alta precisión.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="img/icon/icon2.svg" alt="">
+                                
                             </div>
                             <div class="features-caption">
-                                <h3>Expert instructors</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Replanteo de Obras</h3>
+                                <p>Marcación exacta de ejes, niveles y estructuras para proyectos civiles y de construcción.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="img/icon/icon3.svg" alt="">
+                                
                             </div>
                             <div class="features-caption">
-                                <h3>Life time access</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Levantamientos de Planos</h3>
+                                <p>Creación de planos topográficos detallados para proyectos de ingeniería y construcción.</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +149,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-tittle text-center mb-55">
-                            <h2>Our featured courses</h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -162,12 +158,12 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="img/gallery/featured1.png" alt=""></a>
+                                <a href="#"><img src="../img/gallery/featured1.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
-                                <p>User Experience</p>
-                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
+                                <p>Topografía</p>
+                                <h3><a href="#">Levantamiento Topográfico y Planos de Catastro</a></h3>
+                                <p>Medición precisa de terrenos, fincas y parcelas urbanas. Elaboramos los planos oficiales necesarios para la inscripción, visado y procesos legales de su propiedad.
 
                                 </p>
                                 <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -179,12 +175,45 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star-half"></i>
                                         </div>
-                                        <p><span>(4.5)</span> based on 120</p>
+                                        <p><span>(4.5)</span> basado en 120</p>
                                     </div>
                                     <div class="price">
                                     </div>
                                 </div>
-                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                                <a href="#" class="border-btn border-btn2">Más información</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="#"><img src="../img/gallery/featured3.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>Topografía</p>
+                                <h3><a href="#">Control y Replanteo de Obras</a></h3>
+                                <p>Trasladamos los planos de su proyecto al terreno con milímetro de precisión. Control de niveles, movimiento de tierras y seguimiento de ejes estructurales.
+
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half"></i>
+                                        </div>
+                                        <p><span>(4.5)</span> basado en 120</p>
+                                    </div>
+                                    <div class="price">
+                                    </div>
+                                </div>
+                                <a href="#" class="border-btn border-btn2">Más información</a>
                             </div>
 
                         </div>
@@ -194,73 +223,12 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="img/gallery/featured2.png" alt=""></a>
+                                <a href="#"><img src="../img/gallery/featured2.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
-                                <p>User Experience</p>
-                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-                                </p>
-                                <div class="properties__footer d-flex justify-content-between align-items-center">
-                                    <div class="restaurant-name">
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half"></i>
-                                        </div>
-                                        <p><span>(4.5)</span> based on 120</p>
-                                    </div>
-                                    <div class="price">
-                                    </div>
-                                </div>
-                                <a href="#" class="border-btn border-btn2">Find out more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="img/gallery/featured3.png" alt=""></a>
-                            </div>
-                            <div class="properties__caption">
-                                <p>User Experience</p>
-                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
-
-                                </p>
-                                <div class="properties__footer d-flex justify-content-between align-items-center">
-                                    <div class="restaurant-name">
-                                        <div class="rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half"></i>
-                                        </div>
-                                        <p><span>(4.5)</span> based on 120</p>
-                                    </div>
-                                    <div class="price">
-                                    </div>
-                                </div>
-                                <a href="#" class="border-btn border-btn2">Find out more</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="img/gallery/featured2.png" alt=""></a>
-                            </div>
-                            <div class="properties__caption">
-                                <p>User Experience</p>
-                                <h3><a href="#">Fundamental of UX for Application design</a></h3>
-                                <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.
+                                <p>Topografía</p>
+                                <h3><a href="#">Fotogrametría con Drones y Modelado 3D</a></h3>
+                                <p>Mapeo aéreo de grandes extensiones de terreno en tiempo récord. Obtenga curvas de nivel detalladas, nubes de puntos y ortomosaicos de alta resolución.
 
                                 </p>
                                 <div class="properties__footer d-flex justify-content-between align-items-center">
@@ -272,12 +240,12 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star-half"></i>
                                         </div>
-                                        <p><span>(4.5)</span> based on 120</p>
+                                        <p><span>(4.5)</span> basado en 120</p>
                                     </div>
                                     <div class="price">
                                     </div>
                                 </div>
-                                <a href="#" class="border-btn border-btn2">Find out more</a>
+                                <a href="#" class="border-btn border-btn2">Más información</a>
                             </div>
 
                         </div>
@@ -290,53 +258,46 @@
         <!--? About Area-1 Start -->
         <section class="about-area1 fix pt-10">
             <div class="support-wrapper align-items-center">
-                <div class="left-content1">
+                <div class="col-md-8 mx-auto">
                     <div class="about-icon">
-                        <img src="img/icon/about.svg" alt="">
+                        <img src="../img/icon/about.svg" alt="">
                     </div>
                     <!-- section tittle -->
                     <div class="section-tittle section-tittle2 mb-55">
                         <div class="front-text">
-                            <h2 class="">Learn new skills online with top educators</h2>
-                            <p>The automated process all your website tasks. Discover tools and 
-                                techniques to engage effectively with vulnerable children and young 
-                            people.</p>
+                            <h2 class="">Soluciones topográficas con respaldo profesional y precisión garantizada</h2>
+                            <p>Desarrollamos proyectos de medición y análisis de terrenos utilizando tecnología de vanguardia y metodologías geoespaciales óptimas. Nos aseguramos de que cada plano cumpla con las normativas técnicas y legales vigentes para proteger su inversión.</p>
                         </div>
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
+                            <img src="../img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
-                            <p>Techniques to engage effectively with vulnerable children and young people.</p>
+                            <p>Uso de equipos GNSS/GPS de alta precisión y estaciones totales de última generación.</p>
                         </div>
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
+                            <img src="../img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
-                            <p>Join millions of people from around the world  learning together.</p>
+                            <p>Procesamiento de datos y modelado digital de terrenos con altos estándares técnicos..</p>
                         </div>
                     </div>
 
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
+                            <img src="../img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
-                            <p>Join millions of people from around the world learning together. Online learning is as easy and natural.</p>
+                            <p>Asesoría integral en trámites catastrales, visados municipales y validaciones registrales..</p>
                         </div>
                     </div>
                 </div>
                 <div class="right-content1">
-                    <!-- img -->
-                    <div class="right-img">
-                        
-                        <br>
 
-                        <div class="video-icon" >
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i class="fas fa-play"></i></a>
+                        
                         </div>
                     </div>
                 </div>
@@ -349,7 +310,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8">
                         <div class="section-tittle text-center mb-55">
-                            <h2>Explore top subjects</h2>
+                            <h2>Temas por Explorar</h2>
                         </div>
                     </div>
                 </div>
@@ -357,10 +318,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic1.png" alt="">
+                                <img src="../img/gallery/topic1.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">REPLANTEO DE EJES</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -369,10 +330,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic2.png" alt="">
+                                <img src="../img/gallery/topic2.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">MEDICIÓN DE TIERRAS</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -381,10 +342,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic3.png" alt="">
+                                <img src="../img/gallery/topic3.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">PLANOS DE CATASTRO</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -393,10 +354,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic4.png" alt="">
+                                <img src="../img/gallery/topic4.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">CONTROL DE OBRAS</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -405,10 +366,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic5.png" alt="">
+                                <img src="../img/gallery/topic5.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">URBANIZACIONES</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -417,10 +378,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic6.png" alt="">
+                                <img src="../img/gallery/topic6.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">MAPPING CON DRONES</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -429,10 +390,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic7.png" alt="">
+                                <img src="../img/gallery/topic7.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">CURVAS DE NIVEL</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -441,10 +402,10 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="img/gallery/topic8.png" alt="">
+                                <img src="../img/gallery/topic8.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
+                                        <h3><a href="#">MOVIMIENTO DE TIERRAS</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +415,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-12">
                         <div class="section-tittle text-center mt-20">
-                            <a href="courses.html" class="border-btn">View More Subjects</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -466,130 +427,14 @@
             <div class="support-wrapper align-items-center">
                 <div class="right-content3">
                     <!-- img -->
-                    <div class="right-img">
-                        <img src="img/gallery/about3.png" alt="">
+                
                     </div>
                 </div>
                 <div class="left-content3">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-20">
-                        <div class="front-text">
-                            <h2 class="">Learner outcomes on courses you will take</h2>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Techniques to engage effectively with vulnerable children and young people.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world
-                            learning together.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world learning together.
-                            Online learning is as easy and natural.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    
         <!-- About Area End -->
-        <!--? Team -->
-        <section class="team-area section-padding40 fix">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mb-55">
-                            <h2>Community experts</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-active">
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="img/gallery/team1.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Urela</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="img/gallery/team2.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Uttom</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="img/gallery/team3.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Shakil</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="img/gallery/team4.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Arafat</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="img/gallery/team3.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. saiful</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services End -->
-        <!--? About Area-2 Start -->
-        <section class="about-area2 fix pb-padding">
-            <div class="support-wrapper align-items-center">
-                <div class="right-content2">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="img/gallery/about2.png" alt="">
-                    </div>
-                </div>
-                <div class="left-content2">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-20">
-                        <div class="front-text">
-                            <h2 class="">Take the next step
-                                toward your personal
-                                and professional goals
-                            with us.</h2>
-                            <p>The automated process all your website tasks. Discover tools and techniques to engage effectively with vulnerable children and young people.</p>
-                            <a href="#" class="btn">Join now for Free</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+       
         </section>
         <!-- About Area End -->
     </main>
@@ -604,11 +449,11 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="PantallaInicio.php"><img src="img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="PantallaInicio.php"><img src="../img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>The automated process starts as soon as your clothes go into the machine.</p>
+                                        <p>El proceso automatizado comienza tan pronto como su ropa entra en la máquina.</p>
                                     </div>
                                 </div>
                                 <!-- social -->
@@ -623,13 +468,13 @@
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Our solutions</h4>
+                                <h4>Nuestras soluciones</h4>
                                 <ul>
-                                    <li><a href="#">Design & creatives</a></li>
-                                    <li><a href="#">Telecommunication</a></li>
-                                    <li><a href="#">Restaurant</a></li>
-                                    <li><a href="#">Programing</a></li>
-                                    <li><a href="#">Architecture</a></li>
+                                    <li><a href="#">Diseño y creatividad</a></li>
+                                    <li><a href="#">Telecomunicaciones</a></li>
+                                    <li><a href="#">Restauración</a></li>
+                                    <li><a href="#">Programación</a></li>
+                                    <li><a href="#">Arquitectura</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -637,13 +482,13 @@
                     <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Support</h4>
+                                <h4>Soporte</h4>
                                 <ul>
-                                    <li><a href="#">Design & creatives</a></li>
-                                    <li><a href="#">Telecommunication</a></li>
-                                    <li><a href="#">Restaurant</a></li>
-                                    <li><a href="#">Programing</a></li>
-                                    <li><a href="#">Architecture</a></li>
+                                    <li><a href="#">Diseño y creatividad</a></li>
+                                    <li><a href="#">Telecomunicaciones</a></li>
+                                    <li><a href="#">Restauración</a></li>
+                                    <li><a href="#">Programación</a></li>
+                                    <li><a href="#">Arquitectura</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -651,13 +496,13 @@
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Company</h4>
+                                <h4>Empresa</h4>
                                 <ul>
-                                    <li><a href="#">Design & creatives</a></li>
-                                    <li><a href="#">Telecommunication</a></li>
-                                    <li><a href="#">Restaurant</a></li>
-                                    <li><a href="#">Programing</a></li>
-                                    <li><a href="#">Architecture</a></li>
+                                    <li><a href="#">Diseño y creatividad</a></li>
+                                    <li><a href="#">Telecomunicaciones</a></li>
+                                    <li><a href="#">Restauración</a></li>
+                                    <li><a href="#">Programación</a></li>
+                                    <li><a href="#">Arquitectura</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -689,47 +534,9 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
-<!-- JS here -->
-<script src="js/vendor/modernizr-3.5.0.min.js"></script>
-<!-- Jquery, Popper, Bootstrap -->
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- Jquery Mobile Menu -->
-<script src="js/jquery.slicknav.min.js"></script>
-
-<!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/slick.min.js"></script>
-<!-- One Page, Animated-HeadLin -->
-<script src="js/wow.min.js"></script>
-<script src="js/animated.headline.js"></script>
-<script src="js/jquery.magnific-popup.js"></script>
-
-<!-- Date Picker -->
-<script src="js/gijgo.min.js"></script>
-<!-- Nice-select, sticky -->
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<!-- Progress -->
-<script src="js/jquery.barfiller.js"></script>
-
-<!-- counter , waypoint,Hover Direction -->
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/hover-direction-snake.min.js"></script>
-
-<!-- contact js -->
-<script src="js/contact.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-
-<!-- Jquery Plugins, main Jquery -->	
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<?php
+    ImportJS();
+?>
 
 </body>
 </html>
